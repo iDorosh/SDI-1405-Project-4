@@ -28,7 +28,7 @@ var lowestNumber = function(numberSet, givenNumber) {
 	
 		for(i=0; i < numberSet.length; i++) {
 			
-			if (nuberSet[i] > givenNumber) {
+			if (numberSet[i] > givenNumber) {
 					bigNumbers.push(numberSet[i]);
 			};
 		};
