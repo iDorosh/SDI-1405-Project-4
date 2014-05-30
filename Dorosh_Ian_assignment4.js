@@ -17,5 +17,5 @@ var roundingNum = function(number) {
 }
 
 
-console.log (roundingNum(45.45644))
+console.log (roundingNum(3.249))
 	
