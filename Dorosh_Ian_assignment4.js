@@ -41,7 +41,7 @@ var lowestNumber = function(numberSet, givenNumber) {
 			};
 		};
 		
-			return(smallestNumber + " is the smallest number that is larger than " + givenNumber + ".")
+			return(smallestNumber + " is the smallest number that is larger than " + givenNumber + ".");
 };
 
 
@@ -51,5 +51,5 @@ var lowestNumber = function(numberSet, givenNumber) {
 
 //Main Code
 console.log (roundingNum(3.249))
-consol.log (lowestNumber(numberSet, 4))
+console.log (lowestNumber(numberSet, 4))
 	
