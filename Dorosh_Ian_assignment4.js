@@ -3,6 +3,7 @@
 // Project 4
 
 var numberSet = [5,3,2,6,7,8,23,554,344,2,1,]
+
 //Functions
 
 //Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
@@ -44,12 +45,19 @@ var lowestNumber = function(numberSet, givenNumber) {
 			return(smallestNumber + " is the smallest number that is larger than " + givenNumber + ".");
 };
 
+//Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+// Number Function
 
-
+var convertNumber = function (string){
+	
+	var number = parseInt(string)
+	return (number);
+};	
+	
 
 
 
 //Main Code
 console.log (roundingNum(3.249))
 console.log (lowestNumber(numberSet, 4))
-	
+console.log (convertNumber("567"))
