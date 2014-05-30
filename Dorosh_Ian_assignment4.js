@@ -54,10 +54,22 @@ var convertNumber = function (string){
 	return (number);
 };	
 	
-
+//Title-case a string (split into words, then uppercase the first letter of each word).
+//String Function
+var splitWords = function(inputString){
+	var seperateWords;
+	
+	var seperateWords = (inputString.split (/\b\s+(?!$)/));
+	
+		for (i = 0; i < seperateWords.length; i++) {
+			seperateWords[i] = seperateWords[i].charAt(0).toUpperCase() + seperateWords[i].substr(1);
+		}
+		return (seperateWords.join(" "));
+};	
 
 
 //Main Code
-console.log (roundingNum(3.249))
-console.log (lowestNumber(numberSet, 4))
-console.log (convertNumber("567"))
+console.log (roundingNum(3.249));
+console.log (lowestNumber(numberSet, 4));
+console.log (convertNumber("567"));
+console.log (splitWords("hi my name is ian dorosh"));
