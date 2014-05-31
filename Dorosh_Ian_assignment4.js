@@ -10,11 +10,11 @@ var numberSet = [5,3,2,6,7,8,23,554,344,2,1,]
 // Number function
 
 var roundingNum = function(number) {
-	var finalnumber;
+	var finalNumber;
 	
-	finalnumber = number.toFixed(2);
+	finalNumber = number.toFixed(2);
 	
-	return (number + " is rounded 2 decimal places to " + finalnumber);
+	return (number + " is rounded 2 decimal places to " + finalNumber);
 	
 }
 
@@ -64,25 +64,50 @@ var splitWords = function(inputString){
 		for (i = 0; i < seperateWords.length; i++) {
 			seperateWords[i] = seperateWords[i].charAt(0).toUpperCase() + seperateWords[i].substr(1);
 		}
-		return (seperateWords.join(" "));
-};	
+		var finalString = (seperateWords.join(" "));
+		return finalString;
+};
 
 //Does a string follow a 123-456-7890 pattern like a phone number?
 //String Function
 var validNum = function(phoneNum){
 		var format
 		format = /^\(?([0-9]{3})\)?[-]([0-9]{3})?[-]([0-9]{4})$/;
-			if (format.test(checkPhone)) {
+			if (format.test(phoneNum)) {
 				return true;
 			} else {
 				return false;
-				}
+				};
 };
+
+
+var validEmail = function(email){
+		var format
+		format = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+$/;
+			if (format.test(email)) {
+				return true;
+			} else {
+				return false;
+				};
+};
+
+
+
+
+
 
 
 //Main Code
 console.log (roundingNum(3.249));
+
 console.log (lowestNumber(numberSet, 4));
+
 console.log (convertNumber("567"));
+
 console.log (splitWords("hi my name is ian dorosh"));
+
 console.log (validNum("847-438-4756"));
+console.log (validNum("45-345-3232"));
+
+console.log (validEmail("iDorosh@fullsail.edu"));
+console.log (validEmail("iDoroshfullsail.edu"));
