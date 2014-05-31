@@ -2,7 +2,7 @@
 // SDI 1405
 // Project 4
 
-var numberSet = [5,3,2,6,7,8,23,554,344,2,1,]
+var numberSet = [5,3,2,6,7,8,23,554,344,2,1,];
 
 //Functions
 
@@ -16,7 +16,7 @@ var roundingNum = function(number) {
 	
 	return (number + " is rounded 2 decimal places to " + finalNumber);
 	
-}
+};
 
 
 //Find the smallest value in an array that is greater than a given number
@@ -50,7 +50,7 @@ var lowestNumber = function(numberSet, givenNumber) {
 
 var convertNumber = function (string){
 	
-	var number = parseInt(string)
+	var number = parseInt(string);
 	return (number);
 };	
 	
@@ -58,20 +58,21 @@ var convertNumber = function (string){
 //String Function
 var splitWords = function(inputString){
 	var seperateWords;
+	var finalString;
 	
 	var seperateWords = (inputString.split (/\b\s+(?!$)/));
 	
 		for (i = 0; i < seperateWords.length; i++) {
 			seperateWords[i] = seperateWords[i].charAt(0).toUpperCase() + seperateWords[i].substr(1);
 		}
-		var finalString = (seperateWords.join(" "));
-		return finalString;
+			var finalString = (seperateWords.join(" "));
+			return finalString;
 };
 
 //Does a string follow a 123-456-7890 pattern like a phone number?
 //String Function
 var validNum = function(phoneNum){
-		var format
+		var format;
 		format = /^\(?([0-9]{3})\)?[-]([0-9]{3})?[-]([0-9]{4})$/;
 			if (format.test(phoneNum)) {
 				return true;
@@ -80,9 +81,10 @@ var validNum = function(phoneNum){
 				};
 };
 
-
+// Does a string follow an aaa\@bbb.ccc pattern like an email address? 
+// String Function
 var validEmail = function(email){
-		var format
+		var format;
 		format = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+$/;
 			if (format.test(email)) {
 				return true;
@@ -90,11 +92,6 @@ var validEmail = function(email){
 				return false;
 				};
 };
-
-
-
-
-
 
 
 //Main Code
