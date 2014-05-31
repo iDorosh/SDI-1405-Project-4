@@ -67,9 +67,22 @@ var splitWords = function(inputString){
 		return (seperateWords.join(" "));
 };	
 
+//Does a string follow a 123-456-7890 pattern like a phone number?
+//String Function
+var validNum = function(phoneNum){
+		var format
+		format = /^\(?([0-9]{3})\)?[-]([0-9]{3})?[-]([0-9]{4})$/;
+			if (format.test(checkPhone)) {
+				return true;
+			} else {
+				return false;
+				}
+};
+
 
 //Main Code
 console.log (roundingNum(3.249));
 console.log (lowestNumber(numberSet, 4));
 console.log (convertNumber("567"));
 console.log (splitWords("hi my name is ian dorosh"));
+console.log (validNum("847-438-4756"));
